@@ -38,5 +38,11 @@ if (app.Environment.IsDevelopment())
 
 app.MapControllers();
 
+//guarantee that our database is going to be “created” when the application starts since we’re using an in-memory provider.
+using(var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.EnsureCreated();
+}
 
 app.Run();

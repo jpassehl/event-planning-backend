@@ -15,8 +15,11 @@ namespace EventPlanningAPI.Persistence.Contexts
          {
             base.OnModelCreating(builder);
 
+            builder.Entity<EventIdea>().ToTable("EventIdeas");
+            builder.Entity<EventIdea>().HasKey(e => e.Id);
+            builder.Entity<EventIdea>().Property(e => e.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<EventIdea>()
-                .HasMany(t => t.Tasks)
+                .HasMany(e => e.Tasks)
                 .WithOne(t => t.eventIdea)
                 .HasForeignKey(t => t.eventIdeaId);
 
@@ -25,6 +28,10 @@ namespace EventPlanningAPI.Persistence.Contexts
                 new EventIdea { Id = 100, Name = "Fast and Furious Movie Night", Description="Lowkey chill vibes, have guests bring snacks" }, // Id set manually due to in-memory provider
                 new EventIdea { Id = 101, Name = "Game Night", Description="Play Warioware Move It! With Friends" }
             );
+
+            builder.Entity<Task>().ToTable("Tasks");
+            builder.Entity<Task>().HasKey(t => t.Id);
+            builder.Entity<Task>().Property(t => t.Id).IsRequired().ValueGeneratedOnAdd();
                 
          }
     }

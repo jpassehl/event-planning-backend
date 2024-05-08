@@ -69,3 +69,4 @@
 /Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/obj/Debug/net8.0/EventPlanningAPI.pdb
 /Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/obj/Debug/net8.0/EventPlanningAPI.genruntimeconfig.cache
 /Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/obj/Debug/net8.0/ref/EventPlanningAPI.dll
+/Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/obj/Debug/net8.0/EventPlanningAPI.sourcelink.json
