@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/EventPlanningAPI.csproj": {}
+  },
+  "projects": {
+    "/Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/EventPlanningAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/EventPlanningAPI.csproj",
+        "projectName": "EventPlanningAPI",
+        "projectPath": "/Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/EventPlanningAPI.csproj",
+        "packagesPath": "/Users/jacqueline.passehl/.nuget/packages/",
+        "outputPath": "/Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jacqueline.passehl/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
