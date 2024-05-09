@@ -1,5 +1,4 @@
 using AutoMapper;
-using EventPlanningAPI.Domain.Models;
 using EventPlanningAPI.Domain.Repositories;
 using EventPlanningAPI.Domain.Services;
 using EventPlanningAPI.Mapping;
