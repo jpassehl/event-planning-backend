@@ -70,3 +70,5 @@
 /Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/obj/Debug/net8.0/EventPlanningAPI.genruntimeconfig.cache
 /Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/obj/Debug/net8.0/ref/EventPlanningAPI.dll
 /Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/obj/Debug/net8.0/EventPlanningAPI.sourcelink.json
+/Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/bin/Debug/net8.0/AutoMapper.dll
+/Users/jacqueline.passehl/code/local-repos/event-planning-app/event-planning-backend/EventPlanningAPI/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
