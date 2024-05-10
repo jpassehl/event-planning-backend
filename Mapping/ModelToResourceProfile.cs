@@ -1,10 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using EventPlanningAPI.Domain.Models;
 using EventPlanningAPI.Resources;
+using Task = EventPlanningAPI.Domain.Models.Task;
 
 namespace EventPlanningAPI.Mapping
 {
@@ -13,6 +10,7 @@ namespace EventPlanningAPI.Mapping
         public ModelToResourceProfile()
         {
             CreateMap<EventIdea,EventIdeaResource>();
+            CreateMap<Task, TaskResource>();
         }
     }
 }

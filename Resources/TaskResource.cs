@@ -1,5 +1,3 @@
-using EventPlanningAPI.Domain.Models;
-
 namespace EventPlanningAPI.Resources
 {
     public class TaskResource
@@ -7,6 +5,6 @@ namespace EventPlanningAPI.Resources
         public int Id {get; set;}
         public string Description {get; set;}
         public bool Done {get; set;}
-        public EventIdeaResource eventIdea {get; set;}
+        public EventIdeaResource EventIdea {get; set;}
     }
 }

@@ -5,7 +5,9 @@ using EventPlanningAPI.Mapping;
 using EventPlanningAPI.Persistence.Contexts;
 using EventPlanningAPI.Services;
 using Microsoft.EntityFrameworkCore;
+using Supermarket.API.Domain.Repositories;
 using Supermarket.API.Persistence.Repositories;
+using Supermarket.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,11 +17,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("event-planning-api-in-memory");
 });
 
-//Add Repository
+//Add Repositories
 builder.Services.AddScoped<IEventIdeaRepository, EventIdeaRepository>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
 // Add services to the container.
 builder.Services.AddScoped<IEventIdeaService, EventIdeaService>();
+builder.Services.AddScoped<ITaskService, TaskService>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 

@@ -1,25 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
+using EventPlanningAPI.Resources;
 using Microsoft.AspNetCore.Mvc;
-
+using EventTask = EventPlanningAPI.Domain.Models.Task;
+using EventPlanningAPI.Domain.Services;
 
 namespace EventPlanningAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class TaskController : ControllerBase
+    [Route("/api/[controller]")]
+    public class TaskController : Controller
     {
-        public TaskController()
+        private readonly ITaskService taskService;
+        private readonly IMapper mapper;
+
+        public TaskController(ITaskService taskService, IMapper mapper)
         {
+            this.taskService = taskService;
+            this.mapper = mapper;
         }
 
-        [HttpGet("")]
-        public IEnumerable<string> Getstrings()
+        [HttpGet]
+        public async Task<IEnumerable<TaskResource>> ListAsync()
         {
-            return new string[] {"task1", "task2", "task3" };
+            var tasks = await this.taskService.ListAsync();
+            var resources = this.mapper.Map<IEnumerable<EventTask>, IEnumerable<TaskResource>>(tasks);
+            return resources;
         }
     }
-
 }

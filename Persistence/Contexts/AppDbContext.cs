@@ -25,14 +25,32 @@ namespace EventPlanningAPI.Persistence.Contexts
 
             builder.Entity<EventIdea>().HasData
             (
-                new EventIdea { Id = 100, Name = "Fast and Furious Movie Night", Description="Lowkey chill vibes, have guests bring snacks." }, // Id set manually due to in-memory provider
+                new EventIdea { Id = 100, Name = "Fast and Furious Movie Night", Description="Lowkey chill vibes, have guests bring snacks potluck style." }, // Id set manually due to in-memory provider
                 new EventIdea { Id = 101, Name = "Game Night", Description="Play Warioware: Move It! with friends." }
             );
 
             builder.Entity<Task>().ToTable("Tasks");
             builder.Entity<Task>().HasKey(t => t.Id);
             builder.Entity<Task>().Property(t => t.Id).IsRequired().ValueGeneratedOnAdd();
-                
+
+            builder.Entity<Task>().HasData
+            (
+                new Task
+                {
+                    Id = 100,
+                    Description= "Get ingredients to make salsa",
+                    Done = false,
+                    eventIdeaId =100
+
+                },
+                new Task
+                {
+                    Id = 101,
+                    Description= "Charge switch controllers",
+                    Done = true,
+                    eventIdeaId =101
+                }
+            );     
          }
     }
 }

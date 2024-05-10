@@ -1,6 +1,7 @@
 using AutoMapper;
 using EventPlanningAPI.Domain.Models;
 using EventPlanningAPI.Resources;
+using Task = EventPlanningAPI.Domain.Models.Task;
 
 namespace EventPlanningAPI.Mapping
 {
@@ -9,6 +10,7 @@ namespace EventPlanningAPI.Mapping
         public ResourceToModelProfile()
         {
             CreateMap<SaveEventIdeaResource, EventIdea>();
+            CreateMap<TaskResource, Task>();
         }
     }
 }
