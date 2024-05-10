@@ -33,6 +33,14 @@ namespace EventPlanningAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SaveEventIdeaResource resource)
         {
+            /*
+            Note about Task<IActionResult> Response Type:
+            Methods present in controller classes are called actions, and they have this 
+            signature because we can return more than one possible result after the application executes the action. 
+            
+            [FromBody] attribute tells ASP.NET Core to parse the request body data into our new resource class. It means that 
+            when a JSON containing the category name is sent to our application, the framework will automatically parse it to our new class.
+             */
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState.GetErrorMessages());
