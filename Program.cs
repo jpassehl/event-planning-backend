@@ -54,6 +54,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
 app.MapControllers();
 
 //guarantee that our database is going to be “created” when the application starts since we’re using an in-memory provider.
