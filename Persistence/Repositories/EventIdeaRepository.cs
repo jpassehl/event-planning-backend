@@ -2,6 +2,7 @@ using EventPlanningAPI.Domain.Models;
 using EventPlanningAPI.Domain.Repositories;
 using EventPlanningAPI.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Task = System.Threading.Tasks.Task;
 
 namespace Supermarket.API.Persistence.Repositories
@@ -13,7 +14,8 @@ namespace Supermarket.API.Persistence.Repositories
 
         public async Task<IEnumerable<EventIdea>> ListAsync()
         {
-            return await _context.EventIdeas.ToListAsync();
+            return await _context.EventIdeas.Include( e => e.Tasks).ToListAsync();
+
         }
 
         public async Task AddAsync(EventIdea eventIdea)

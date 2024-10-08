@@ -3,10 +3,10 @@ namespace EventPlanningAPI.Domain.Models
 {
     public class EventIdea
     {
-        public int id {get; set;}
-        public string name {get; set;}
-        public string description {get; set;}
-        public string imgUrl {get; set;}
-        public IList<Task>? tasks {get; set;} = new List<Task>();
+        public int Id {get; set;}
+        public string Name {get; set;}
+        public string Description {get; set;}
+        public string ImgUrl {get; set;}
+        public IList<Task>? Tasks {get; set;} = new List<Task>();
     }
 }

@@ -13,8 +13,7 @@ namespace Supermarket.API.Persistence.Repositories
 
         public async Task<IEnumerable<EventTask>> ListAsync()
         {
-            return await _context.Tasks.Include(p => p.eventIdea)
-                                          .ToListAsync();
+            return await _context.Tasks.ToListAsync();
         }
     }
 }

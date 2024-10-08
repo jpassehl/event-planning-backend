@@ -7,10 +7,10 @@ namespace EventPlanningAPI.Domain.Models
 {
     public class Task
     {
-        public int id {get; set;}
-        public string description {get; set;}
-        public bool done {get; set;} = false;
-        public EventIdea eventIdea {get; set;}
-        public int eventIdeaId {get; set;}
+        public int Id {get; set;}
+        public string Description {get; set;}
+        public bool Done {get; set;} = false;
+        public EventIdea EventIdea {get; set;}
+        public int EventIdeaId {get; set;}
     }
 }

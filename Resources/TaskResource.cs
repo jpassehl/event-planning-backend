@@ -5,6 +5,6 @@ namespace EventPlanningAPI.Resources
         public int Id {get; set;}
         public string Description {get; set;}
         public bool Done {get; set;}
-        public EventIdeaResource EventIdea {get; set;}
+        public int EventIdeaId {get; set;}
     }
 }

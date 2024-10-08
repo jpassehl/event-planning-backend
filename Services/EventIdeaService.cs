@@ -49,8 +49,8 @@ namespace EventPlanningAPI.Services
                 return new EventIdeaResponse("Event Idea not found.");
             }
 
-            existingEventIdea.name = eventIdea.name;
-            existingEventIdea.description = eventIdea.description;
+            existingEventIdea.Name = eventIdea.Name;
+            existingEventIdea.Description = eventIdea.Description;
 
             try
             {
