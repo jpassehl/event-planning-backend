@@ -51,6 +51,7 @@ namespace EventPlanningAPI.Services
 
             existingEventIdea.Name = eventIdea.Name;
             existingEventIdea.Description = eventIdea.Description;
+            existingEventIdea.ImgUrl = eventIdea.ImgUrl;
 
             try
             {

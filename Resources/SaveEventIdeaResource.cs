@@ -8,5 +8,6 @@ namespace EventPlanningAPI.Resources
         public string Name {get;set;}
         [Required]
         public string Description {get;set;}
+        public string? ImgUrl{get;set;}
     }
 }
