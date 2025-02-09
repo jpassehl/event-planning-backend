@@ -10,5 +10,6 @@ namespace EventPlanningAPI.Domain.Services
         Task<EventIdeaResponse> SaveAsync (EventIdea eventIdea);
         Task<EventIdeaResponse> UpdateAsync(int id, EventIdea eventIdea);
         Task<EventIdeaResponse> DeleteAsync(int id);
+        Task<EventIdeaResponse> GetEventIdeaAsync (int id);
     }
 }

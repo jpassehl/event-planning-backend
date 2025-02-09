@@ -93,5 +93,28 @@ namespace EventPlanningAPI.Services
                 );
             }
         }
+        
+        public async Task<EventIdeaResponse> GetEventIdeaAsync(int id)
+        {
+            try
+            {
+                var existingEventIdea = await eventIdeaRepository.FindByIdAsync(id);
+
+                if (existingEventIdea == null)
+                {
+                    return new EventIdeaResponse("Event Idea not found.");
+                }
+
+                return new EventIdeaResponse(existingEventIdea);
+            }
+            catch (Exception ex)
+            {
+                // Do some logging stuff
+                return new EventIdeaResponse(
+                    $"An error occurred when retrieving the Event Idea: {ex.Message}"
+                );
+            }
+
+        }
     }
 }

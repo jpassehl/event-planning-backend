@@ -74,13 +74,26 @@ namespace EventPlanningAPI.Controllers
             return Ok(eventIdeaResource);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetEventIdeaAsync(int id)
+        {
+            var result = await this.eventIdeaService.GetEventIdeaAsync(id);
+
+            if(!result.Success)
+                return NotFound(result.Message); 
+
+            var eventIdeaResource = this.mapper.Map<EventIdea, EventIdeaResource>(result.EventIdea);
+            return Ok(eventIdeaResource);
+
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await this.eventIdeaService.DeleteAsync(id);
 
             if (!result.Success)
-                return BadRequest(result.Message);
+                return NotFound(result.Message); 
 
             var eventIdeaResource = this.mapper.Map<EventIdea, EventIdeaResource>(result.EventIdea);
             return Ok(eventIdeaResource);
