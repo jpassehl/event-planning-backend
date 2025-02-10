@@ -2,7 +2,6 @@ using EventPlanningAPI.Domain.Models;
 using EventPlanningAPI.Domain.Repositories;
 using EventPlanningAPI.Domain.Services;
 using EventPlanningAPI.Domain.Services.Communication;
-using Supermarket.API.Persistence.Repositories;
 
 namespace EventPlanningAPI.Services
 {

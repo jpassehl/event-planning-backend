@@ -5,9 +5,9 @@ using EventPlanningAPI.Mapping;
 using EventPlanningAPI.Persistence.Contexts;
 using EventPlanningAPI.Services;
 using Microsoft.EntityFrameworkCore;
-using Supermarket.API.Domain.Repositories;
-using Supermarket.API.Persistence.Repositories;
-using Supermarket.API.Services;
+using EventPlanningApp.API.Domain.Repositories;
+using EventPlanningApp.API.Persistence.Repositories;
+using EventPlanningApp.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

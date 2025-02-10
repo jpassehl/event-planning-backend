@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Task = System.Threading.Tasks.Task;
 
-namespace Supermarket.API.Persistence.Repositories
+namespace EventPlanningApp.API.Persistence.Repositories
 {
     public class EventIdeaRepository : BaseRepository, IEventIdeaRepository
     {

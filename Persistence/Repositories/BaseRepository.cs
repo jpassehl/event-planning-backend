@@ -1,6 +1,6 @@
 using EventPlanningAPI.Persistence.Contexts;
 
-namespace Supermarket.API.Persistence.Repositories
+namespace EventPlanningApp.API.Persistence.Repositories
 {
     public abstract class BaseRepository
     {

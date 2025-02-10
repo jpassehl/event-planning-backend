@@ -1,8 +1,8 @@
 using EventTask = EventPlanningAPI.Domain.Models.Task;
 using EventPlanningAPI.Domain.Services;
-using Supermarket.API.Domain.Repositories;
+using EventPlanningApp.API.Domain.Repositories;
 
-namespace Supermarket.API.Services
+namespace EventPlanningApp.API.Services
 {
     public class TaskService : ITaskService
     {

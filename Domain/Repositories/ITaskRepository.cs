@@ -1,6 +1,6 @@
 using EventTask = EventPlanningAPI.Domain.Models.Task;
 
-namespace Supermarket.API.Domain.Repositories
+namespace EventPlanningApp.API.Domain.Repositories
 {
     public interface ITaskRepository
     {
